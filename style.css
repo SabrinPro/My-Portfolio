@@ -1184,3 +1184,29 @@ textarea {
     transform: none;
   }
 }
+@media (max-width: 480px) {
+  .container {
+    width: 92%;
+  }
+
+  .hero {
+    padding-top: 105px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .contact-form {
+    padding: 22px;
+  }
+
+  .timeline-card {
+    padding: 24px;
+  }
+}
