@@ -53,16 +53,30 @@ form.addEventListener("submit",(event)=>{
   const subject=document.getElementById("subject").value.trim();
   const message=document.getElementById("message").value.trim();
   const errors=[];
-  if(name.length<2) errors.push("Please enter your name.");
-  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) errors.push("Please enter a valid email address.");
-  if(subject.length<2) errors.push("Please enter a subject.");
-  if(message.length<10) errors.push("Message should be at least 10 characters.");
-  formMessage.className="form-message";
-  if(errors.length){
-    formMessage.textContent=errors[0];
-    formMessage.classList.add("error");
-    return;
-  }
+
+if(name.length<2) errors.push("Please enter your name.");
+if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) errors.push("Please enter a valid email address.");
+if(subject.length<2) errors.push("Please enter a subject.");
+if(message.length<10) errors.push("Message should be at least 10 characters.");
+
+const fields=[
+  ["name",name.length<2],
+  ["email",!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)],
+  ["subject",subject.length<2],
+  ["message",message.length<10]
+];
+
+fields.forEach(([id,invalid])=>{
+  document.getElementById(id).setAttribute("aria-invalid",String(invalid));
+});
+
+formMessage.className="form-message";
+
+if(errors.length){
+  formMessage.innerHTML=errors.map(error=>`<div>${error}</div>`).join("");
+  formMessage.classList.add("error");
+  return;
+}
   formMessage.textContent="Thanks! Your message passed validation. Connect the form to a backend/email service when you are ready.";
   formMessage.classList.add("success");
   form.reset();
