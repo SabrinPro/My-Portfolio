@@ -133,7 +133,13 @@ textarea {
 .nav-link:hover,
 .nav-link.active {
   color: #fff;
-  background: rgba(139, 92, 246, 0.14);
+  background: linear-gradient(
+    100deg,
+    rgba(139, 92, 246, 0.22),
+    rgba(56, 189, 248, 0.12)
+  );
+  box-shadow: 0 6px 20px rgba(139, 92, 246, 0.12);
+}
 }
 .nav-cta,
 .btn {
@@ -469,6 +475,12 @@ textarea {
     rgba(139, 92, 246, 0.13),
     rgba(56, 189, 248, 0.06)
   );
+  border: 1px solid var(--border);
+  padding: 32px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: 0.3s ease;
+}
   border: 1px solid var(--border);
   padding: 32px;
   border-radius: var(--radius);
