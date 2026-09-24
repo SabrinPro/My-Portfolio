@@ -319,22 +319,6 @@ The work explores structured reasoning using **Tree-of-Thoughts** for solving Be
 
 The research evaluates different reasoning approaches and investigates how structured reasoning can improve performance on Bengali mathematical problem-solving tasks.
 
----
-
-### 2. Graph Neural Network Framework for Fake News Detection in Social Media Text: Leveraging RoBERTa Embeddings and k-NN Graphs
-
-**Conference:** ICEFronT 2026
-**Status:** Conditionally Accepted — Round 1
-**Research Area:** Natural Language Processing, Fake News Detection, Graph Neural Networks, Social Media Text Classification
-
-The research explores a graph-based framework for fake news detection using **RoBERTa embeddings** and **k-Nearest Neighbor (k-NN) graphs**.
-
-The project combines transformer-based text representations with graph-based learning for social media text classification.
-
-> Publication links are included only when an official or verified publication URL is available. No unverified URLs are added to the project.
-
----
-
 ## Projects
 
 ### Software Development Lab Website
