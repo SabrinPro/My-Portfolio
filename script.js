@@ -28,6 +28,12 @@ menuToggle.addEventListener("click",()=>{
 });
 navItems.forEach(link=>link.addEventListener("click",closeMenu));
 
+document.addEventListener("keydown",(event)=>{
+  if(event.key==="Escape" && navLinks.classList.contains("open")){
+    closeMenu();
+  }
+});
+
 const observer=new IntersectionObserver((entries)=>{
   entries.forEach(entry=>{
     if(entry.isIntersecting) entry.target.classList.add("visible");
